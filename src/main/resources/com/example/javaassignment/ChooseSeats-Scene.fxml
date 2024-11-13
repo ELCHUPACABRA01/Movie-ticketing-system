@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <Label text="Sell tickets" textFill="#a44040">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="lblSelectedShowing" text="" />
+
+        <GridPane fx:id="seatGrid" alignment="CENTER" hgap="5" vgap="5">
+        </GridPane>
+      <VBox>
+         <children>
+               <Label text="Selected seats:" />
+               <ListView fx:id="selectedSeatsList" prefHeight="359.0" prefWidth="680.0" />
+         </children>
+      </VBox>
+
+        <TextField fx:id="txtCustomerName" prefHeight="43.0" prefWidth="680.0" promptText="Customer name" />
+
+        <HBox alignment="CENTER" prefWidth="680.0" spacing="20">
+            <Button fx:id="btnSellTickets" onAction="#sellTickets" text="Sell Tickets" />
+            <Button fx:id="btnCancel" onAction="#cancelSelling" text="Cancel" />
+        </HBox>
+
+        <Label fx:id="lblMessage" text="" />
+    </children>
+</VBox>

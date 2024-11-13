@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label text="Sales History" textFill="#a44040">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="salesHistoryTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="566.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn prefWidth="125.0" text="Date/Time" />
+                <TableColumn prefWidth="125.0" text="Number of Tickets" />
+                <TableColumn prefWidth="300.0" text="Customer" />
+                <TableColumn prefWidth="130.0" text="Showing" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fillWidth="false" prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label text="Manage Showings" textFill="#a44040">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+      <HBox prefHeight="63.0" prefWidth="709.0">
+         <children>
+            <Label text="Search:" />
+            <TextArea fx:id="txtSearch" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+        <TableView fx:id="showingTable" prefHeight="380.0" prefWidth="680.0">
+            <columns>
+                <TableColumn prefWidth="125.0" text="Start">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="startDateTime" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="125.0" text="End">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="endDateTime" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="300.0" text="Title">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="130.0" text="Seats Left">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="seatsLeft" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <HBox prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="95.0" prefWidth="680.0" spacing="20.0">
+                    <children>
+                        <Button fx:id="btnAddShowing" mnemonicParsing="false" onAction="#goToAddShowingScene" prefHeight="40.0" prefWidth="100.0" text="Add Showing" />
+                        <Button fx:id="btnEditShowing" mnemonicParsing="false" onAction="#goToEditShowingScene" prefHeight="40.0" prefWidth="100.0" text="Edit Showing" />
+                        <Button fx:id="btnDeleteShowing" disable="true" mnemonicParsing="false" onAction="#deleteMovie" prefHeight="40.0" prefWidth="100.0" text="Delete Showing" />
+                  <Label fx:id="lblMessage" />
+                  <Button fx:id="btnExportShowing" mnemonicParsing="false" onAction="#exportToCSV" prefHeight="39.0" prefWidth="112.0" text="Export Showing" />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

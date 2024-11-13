@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fillWidth="false" prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label text="Edit Showing" textFill="#a44040">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <VBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="680.0" spacing="20.0">
+            <children>
+                <TextField fx:id="txtTitle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="351.0" promptText="Title" />
+            </children>
+        </VBox>
+        <HBox prefHeight="72.0" prefWidth="680.0" spacing="20.0">
+            <children>
+                <Label text="Start Date/Time:" />
+                <DatePicker fx:id="dpStartDate" />
+                <TextField fx:id="txtStartTime" />
+            </children>
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="682.0" spacing="20.0">
+            <children>
+                <Label text="End Date/Time:" />
+                <DatePicker fx:id="dpEndDate" />
+                <TextField fx:id="txtEndTime" />
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="112.0" prefWidth="680.0" spacing="20.0">
+            <children>
+                <Button fx:id="btnEditShowing" mnemonicParsing="false" onAction="#editMovie" prefHeight="45.0" prefWidth="98.0" text="Edit Showing" />
+                <Button fx:id="btnCancelAddShowing" mnemonicParsing="false" onAction="#cancelAddShowing" prefHeight="45.0" prefWidth="99.0" text="Cancel" />
+            <Label fx:id="lblMessage" text="Label" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

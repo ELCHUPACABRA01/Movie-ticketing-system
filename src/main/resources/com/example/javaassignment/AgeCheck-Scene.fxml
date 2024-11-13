@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="364.0" prefWidth="485.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment.AgeCheckController">
+   <children>
+      <Label text="Age check required">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMovieTitle" text="Label" />
+      <Label fx:id="lblDateAndTime" text="Label" />
+      <Label fx:id="lblNrOfTickets" text="Label" />
+      <Label fx:id="lblCustomerName" text="Label" />
+      <CheckBox fx:id="cbAgeConfirmed" mnemonicParsing="false" text="I have checked the ID card and confirmed that the customer is at least 16 years old" />
+      <Label fx:id="lblMessage" text="Label" />
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnConfirmPurchase" mnemonicParsing="false" onAction="#confirmAgeCheck" prefHeight="42.0" prefWidth="122.0" text="Confirm Purchase" />
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#cancelAgeCheck" prefHeight="40.0" prefWidth="97.0" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

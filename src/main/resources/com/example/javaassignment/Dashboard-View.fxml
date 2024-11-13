@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="layout" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+      <HBox alignment="CENTER" prefHeight="84.0" prefWidth="600.0" spacing="30.0">
+         <children>
+            <Label alignment="CENTER" text="Fantastic Cinema">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSellTickets" text="Sell Tickets" onAction="#goToSellTicketsScene" />
+            <Button fx:id="btnManageShowings" onAction="#goToManageShowingsScene" text="Manage Showings" />
+            <Button fx:id="btnSalesHistory" onAction="#goToSalesHistoryScene" prefWidth="127.0" text="View Sales History" />
+         </children>
+      </HBox>
+
+      <Pane fx:id="contentPane" prefHeight="500.0" prefWidth="680.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="lblWelcome" layoutX="16.0" layoutY="29.0" text="Welcome!">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDateTime" layoutX="16.0" layoutY="113.0" />
+            <Label fx:id="lblRole" layoutX="16.0" layoutY="77.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+
+   </children>
+</VBox>
